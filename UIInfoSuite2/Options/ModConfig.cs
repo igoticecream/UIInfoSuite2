@@ -9,4 +9,5 @@ internal class ModConfig
   public string ApplyDefaultSettingsFromThisSave { get; set; } = "JohnDoe_123456789";
   public KeybindList OpenCalendarKeybind { get; set; } = KeybindList.ForSingle(SButton.B);
   public KeybindList OpenQuestBoardKeybind { get; set; } = KeybindList.ForSingle(SButton.H);
+  public KeybindList OpenSpecialOrdersKeybind { get; set; } = KeybindList.ForSingle(SButton.N);
 }

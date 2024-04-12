@@ -3,6 +3,7 @@ using StardewModdingAPI;
 using StardewModdingAPI.Events;
 using StardewValley;
 using StardewValley.Menus;
+using StardewValley.SpecialOrders;
 using UIInfoSuite2.AdditionalFeatures;
 using UIInfoSuite2.Compatibility;
 using UIInfoSuite2.Infrastructure;
@@ -82,6 +83,13 @@ public class ModEntry : Mod
       tooltip: () => "Opens the quest board.",
       getValue: () => _modConfig.OpenQuestBoardKeybind,
       setValue: value => _modConfig.OpenQuestBoardKeybind = value
+    );
+    configMenu.AddKeybindList(
+      ModManifest,
+      name: () => "Open special orders keybind",
+      tooltip: () => "Opens the special orders board.",
+      getValue: () => _modConfig.OpenSpecialOrdersKeybind,
+      setValue: value => _modConfig.OpenSpecialOrdersKeybind = value
     );
   }
 #endregion
@@ -168,6 +176,11 @@ public class ModEntry : Mod
         helper.Input.SuppressActiveKeybinds(_modConfig.OpenQuestBoardKeybind);
         Game1.RefreshQuestOfTheDay();
         Game1.activeClickableMenu = new Billboard(true);
+      }
+      else if (Context.IsPlayerFree && SpecialOrder.IsSpecialOrdersBoardUnlocked() && _modConfig.OpenSpecialOrdersKeybind.JustPressed())
+      {
+        helper.Input.SuppressActiveKeybinds(_modConfig.OpenSpecialOrdersKeybind);
+        Game1.activeClickableMenu = new SpecialOrdersBoard();
       }
     }
   }
