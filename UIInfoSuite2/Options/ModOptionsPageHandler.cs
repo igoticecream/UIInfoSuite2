@@ -89,6 +89,7 @@ internal class ModOptionsPageHandler : IDisposable
     var showRobinBuildingStatusIcon = new ShowRobinBuildingStatusIcon(helper);
     var showSeasonalBerry = new ShowSeasonalBerry(helper);
     var showTodaysGift = new ShowTodaysGifts(helper);
+    var showKrobusSprinkler = new ShowKrobusSprinkler(helper);
 
     _elementsToDispose = new List<IDisposable>
     {
@@ -107,7 +108,8 @@ internal class ModOptionsPageHandler : IDisposable
       showQueenOfSauceIcon,
       showToolUpgradeStatus,
       showRobinBuildingStatusIcon,
-      showSeasonalBerry
+      showSeasonalBerry,
+      showKrobusSprinkler
     };
 
     var whichOption = 1;
@@ -349,6 +351,24 @@ internal class ModOptionsPageHandler : IDisposable
         showTodaysGift.ToggleOption,
         () => options.ShowTodaysGifts,
         v => options.ShowTodaysGifts = v
+      )
+    );
+    var showKrobusSprinklerIcon = new ModOptionsCheckbox(
+      _helper.SafeGetString(nameof(options.ShowKrobusSprinkler)),
+      whichOption++,
+      showKrobusSprinkler.ToggleOption,
+      () => options.ShowKrobusSprinkler,
+      v => options.ShowKrobusSprinkler = v
+    );
+    _optionsElements.Add(showKrobusSprinklerIcon);
+    _optionsElements.Add(
+      new ModOptionsCheckbox(
+        _helper.SafeGetString(nameof(options.HideKrobusWhenVisited)),
+        whichOption++,
+        showKrobusSprinkler.ToggleHideWhenVisitedOption,
+        () => options.HideKrobusWhenVisited,
+        v => options.HideKrobusWhenVisited = v,
+        showKrobusSprinklerIcon
       )
     );
   }

@@ -37,4 +37,5 @@ public static class LanguageKeys
   public const string CanFindSalmonberry = "CanFindSalmonberry";
   public const string CanFindBlackberry = "CanFindBlackberry";
   public const string CanFindHazelnut = "CanFindHazelnut";
+  public const string KrobusSprinkler = "KrobusSprinkler";
 }
