@@ -100,7 +100,6 @@ internal class ModOptionsPageHandler : IDisposable
       showWhenAnimalNeedsPet,
       showCalendarAndBillboardOnGameMenuButton,
       showCropAndBarrelTime,
-      experienceBar,
       showItemHoverInformation,
       showTravelingMerchant,
       showRainyDayIcon,
