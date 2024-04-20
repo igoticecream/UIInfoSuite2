@@ -32,4 +32,6 @@ internal record ModOptions
   public bool ShowTodaysGifts { get; set; } = true;
   public bool HideBirthdayIfFullFriendShip { get; set; } = true;
   public Dictionary<string, bool> ShowLocationOfFriends { get; set; } = new();
+  public bool ShowKrobusSprinkler { get; set; } = true;
+  public bool HideKrobusWhenVisited { get; set; } = true;
 }

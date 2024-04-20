@@ -1,4 +1,4 @@
-{
+﻿{
   // GUI - Game Menu
   "OptionsTabTooltip": "UI Info Suite 2 Options",
   //GUI - Billboard
@@ -45,6 +45,8 @@
   "LuckStatus4": "The spirits feel absolutely neutral today",
   "LuckStatus5": "Luck will not be on your side today",
   "LuckStatus6": "Maybe you should stay home today...",
+  // Display icons - Merchants
+  "KrobusSprinkler": "Krobus has iridium sprinkler for sale",
   //Settings - General
   "ShowLevelUpAnimation": "Show level up animation",
   "ShowExperienceBar": "Show experience bar",
@@ -74,6 +76,8 @@
   "ShowExactValue": "Show exact value",
   "ShowSeasonalBerry": "Show seasonal forageables",
   "ShowSeasonalBerryHazelnut": "Show hazelnuts on trees",
+  "ShowKrobusSprinkler": "Show Krobus store items",
+  "HideKrobusWhenVisited": "Hide when visited",
   //Others
   "LevelUp": "Level Up"
 }
